@@ -23,15 +23,16 @@ export default function Login(){
         
         {errorMessage && <h3>{errorMessage}</h3>}
         <Form 
-        className="flex flex-col mt-20 max-w-md m-auto rounded p-6 shadow-md bg-gray-300 " 
+        className="flex flex-col mt-20 max-w-md m-auto rounded-lg p-6 text-white shadow-md bg-gray-700 border " 
+          
         method="post" 
         replace 
         onSubmit={(e) => {submit(e.currentTarget)}}>
-            <h3 className='self-center mb-4'>Please log in to your account</h3>
+            <h2 className='self-center mb-4 text-xl font-bold'>Please log in to your account</h2>
             <label className='' htmlFor='myEmail'>Email</label>
             <input 
             id='myEmail'
-            className='text-2xl border-2 rounded p-1 mb-4 hover:bg-slate-300 focus:bg-slate-100 focus:ring focus:ring-orange-600'
+            className='text-2xl border-2 rounded-lg p-1 mb-4 hover:bg-slate-300 focus:bg-slate-100 focus:ring focus:ring-orange-600'
             type='email'
             name='email'
             placeholder="your@company.com" 
@@ -39,7 +40,7 @@ export default function Login(){
             <label htmlFor='myPassword'>Password</label>
             <input 
             id='myPassword'
-            className='mb-8 border-2 rounded p-1 text-2xl hover:bg-slate-300 focus:bg-slate-100 focus:ring focus:ring-orange-600'
+            className='mb-8 border-2 rounded-lg p-1 text-2xl hover:bg-slate-300 focus:bg-slate-100'
             type='password'
             name='password'
             placeholder='Password'
@@ -47,7 +48,7 @@ export default function Login(){
             />
 
             <button
-            className='bg-gray-400 py-1.5 px-2.5 rounded '
+            className='bg-gray-400 py-1.5 px-2.5 rounded-lg '
             >Log In</button>
 
         </Form>
