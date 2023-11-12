@@ -2,11 +2,11 @@ import React from 'react'
 import {Form, useSubmit, useActionData} from 'react-router-dom'
 
 export async function action({request}) {
-    console.log(request)
+    const formData = await request.formData()
+    const email = data.get("email")
+    const password = data.get("password")
     try{
-        const data = await request.formData()
-        const email = data.get("email")
-        const password = data.get("password")
+        
     } catch(e){
         return e.message
     }
